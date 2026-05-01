@@ -173,13 +173,8 @@ function disableButtons() {
 }
 
 function runDealerTurn() {
-    if (dealerHand.count === 22) {
-        reduceHandAces(dealerHand);
-    }
-
     while (dealerHand.count < 17) {
         drawCard(dealerHand);
-        reduceHandAces(dealerHand);
     }
 
     if (dealerHand.count - 10 === 7 && dealerHand.cards.some(card => card.numValue === 'Ace')) {
@@ -193,9 +188,6 @@ function hit() {
     if (playerHand1.selected && playerHand1.count < 21) drawCard(playerHand1);
 
     if (playerHand2.selected && playerHand2.count < 21) drawCard(playerHand2);
-
-    reduceHandAces(playerHand1);
-    reduceHandAces(playerHand2);
 
     const checkDidPlayerSplit = playerHand2.count !== 0;
 
@@ -256,7 +248,7 @@ function stay() {
 
     if (!checkDidPlayerSplit) {
         return runDealerTurn();
-    } 
+    }
 
     playerHand1.selected = false;
     playerHand2.selected = true;
@@ -318,7 +310,7 @@ async function game() {
     faceDownCard = shoe.drawCard();
     dealerHand.addToHand(faceDownCard);
 
-    faceDownCardImage.src = "../../Images/Blackjack/backOfCard.jpeg";
+    faceDownCardImage.src = "../Images/Blackjack/backOfCard.jpeg";
     faceDownCardImage.className = "game-cards slideInTop";
 
     dealerCardDisplay.appendChild(faceDownCardImage);

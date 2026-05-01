@@ -35,7 +35,7 @@ body {
 }
 
 #roulette {
-    background-image: url("../../Images/Home/view-roulette-game-casino_23-2151007731.avif");
+    background-image: url("../Images/view-roulette-game-casino_23-2151007731.avif");
     background-size: cover;
     background-position-y: center;
 }
@@ -45,13 +45,13 @@ body {
 }
 
 #slots {
-    background-image: url("../../Images/Home/eugenia-vorontsova-promo-bg1.jpg");
+    background-image: url("../Images/eugenia-vorontsova-promo-bg1.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #classic-slots {
-    background-image: url("../../Images/Home/classic-slots-logo.png");
+    background-image: url("../Images/classic-slots-logo.png");
     background-size: cover;
     background-position: center;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 #blackjack {
-    background-image: url("../../Images/Home/blackjack1.webp");
+    background-image: url("../Images/blackjack1.webp");
     background-size: cover;
     background-position: center;
 }
@@ -71,13 +71,13 @@ body {
 }
 
 #minesweep {
-    background-image: url("../../Images/Home/minesweep_background.jpg");
+    background-image: url("../Images/minesweep_background.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #Horse-Racing{
-    background-image: url("../../Images/Home/istockphoto-478244976-612x612.jpg");
+    background-image: url("../Images/istockphoto-478244976-612x612.jpg");
     background-size: cover;
     background-position: center;
 }
