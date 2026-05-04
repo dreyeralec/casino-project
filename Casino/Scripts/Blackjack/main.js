@@ -219,14 +219,12 @@ function double() {
         playerHand1.betOnThisHand += originalBet;
 
         drawCard(playerHand1);
-        reduceHandAces(playerHand1);
     }
 
     if (playerHand2.selected) {
         playerHand2.betOnThisHand += originalBet;
 
         drawCard(playerHand2);
-        reduceHandAces(playerHand2)
         runDealerTurn();
     }
 
