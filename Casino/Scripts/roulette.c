@@ -4,10 +4,10 @@
 #include <string.h>
 #include <stdbool.h>
 
-struct Number {
+typedef struct {
     int num;
-    char color[4];
-};
+    const char* color;
+} Number;
 
 const char* get_color(int i) {
     if (i == 0) {
@@ -27,10 +27,11 @@ const char* get_color(int i) {
     }
 }
 
-void generate_table(struct Number table[37]) {
+void generate_table(Number *table) {
     for (int i = 0; i < 37; i++) {
+	const char* color = get_color(i);
         table[i].num = i;
-        strcpy(table[i].color, get_color(i));
+        table[i].color = color;
     }
 }
 
@@ -38,8 +39,9 @@ int main(void) {
     int guess = 0;
     int balance = 10;
     int bet_size = 0;
-    struct Number table[37];
+    Number table[37];
 
+    srand(time(NULL));
     generate_table(table);
     while (true) {
         printf("Balance: %d\n", balance);
@@ -52,9 +54,7 @@ int main(void) {
 	    scanf("%d", &bet_size);
 	}
 
-	srand(time(NULL));
-
-	int spin = (rand() % 36) + 1;
+	int spin = (rand() % 37) + 1;
 
 	printf("SPIN: %d\nCOLOR: %s\n", table[spin].num, table[spin].color);
 
